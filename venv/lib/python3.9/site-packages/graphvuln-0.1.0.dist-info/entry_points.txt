@@ -1,0 +1,2 @@
+[console_scripts]
+graphvuln = graphvuln.cli:app

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphvuln"
+version = "0.1.0"
+description = "A graph-aware dependency vulnerability scanner and auto-fixer."
+authors = [{name = "Suresh Kumar", email = "your.email@example.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "networkx>=3.0",
+    "requests>=2.31.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0"
+]
+
+[project.scripts]
+# This line is the magic! It means when you type `graphvuln` in the terminal,
+# it will execute the `app` object inside `src/graphvuln/cli.py`
+graphvuln = "graphvuln.cli:app"
